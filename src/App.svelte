@@ -42,9 +42,9 @@
     <span class="sign">Nikhil Bishnoi</span>
     <div on:click={toggleMode}>
       {#if mode == "Day"}
-        <img src="/fonts/moon.png" alt="icon" />
+        <img src="./fonts/moon.png" alt="icon" />
       {:else}
-        <img src="/fonts/sun.png" alt="icon" />
+        <img src="./fonts/sun.png" alt="icon" />
       {/if}
     </div>
   </div>
@@ -339,28 +339,28 @@
 <style>
   @font-face {
     font-family: Lato-Hai;
-    src: url(/fonts/lato/Lato-Hai.ttf);
+    src: url(./fonts/lato/Lato-Hai.ttf);
   }
   @font-face {
     font-family: Lato-Lig;
-    src: url(/fonts/lato/Lato-Lig.ttf);
+    src: url(./fonts/lato/Lato-Lig.ttf);
   }
   @font-face {
     font-family: Lato-Bol;
-    src: url(/fonts/lato/Lato-Bol.ttf);
+    src: url(./fonts/lato/Lato-Bol.ttf);
   }
   @font-face {
     font-family: Lato-Reg;
-    src: url(/fonts/lato/Lato-Reg.ttf);
+    src: url(./fonts/lato/Lato-Reg.ttf);
   }
   @font-face {
     font-family: Raleway-Medium;
-    src: url(/fonts/raleway/Raleway-Medium.otf);
+    src: url(./fonts/raleway/Raleway-Medium.otf);
   }
 
   @font-face {
     font-family: TheScientist;
-    src: url(/fonts/the-scientist/TheScientist.ttf);
+    src: url(./fonts/the-scientist/TheScientist.ttf);
   }
   :root {
     --container-background: inherit;
