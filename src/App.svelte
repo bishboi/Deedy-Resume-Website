@@ -1,8 +1,53 @@
 <script>
+  let backgroundColor = "#ffffff";
+  let primaryColor = "#000000";
+  let secondaryColor = "#333333";
+  let otherColor = "#6a6a6a";
+  let mode = "Day";
+  let rootElement;
+
+  function toggleMode() {
+    console.log("Hello");
+    if (mode == "Day") {
+      mode = "Night";
+      backgroundColor = "#15202B";
+      primaryColor = "#ffffff";
+      secondaryColor = "#fbfcf8";
+      otherColor = "#fafafa";
+    } else {
+      mode = "Day";
+      backgroundColor = "#ffffff";
+      primaryColor = "#000000";
+      secondaryColor = "#333333";
+      otherColor = "#6a6a6a";
+    }
+  }
+
+  $: rootElement &&
+    rootElement.style.setProperty("--container-background", backgroundColor);
+
+  $: rootElement &&
+    rootElement.style.setProperty("--primary-text", primaryColor);
+
+  $: rootElement &&
+    rootElement.style.setProperty("--secondary-text", secondaryColor);
+
+  $: rootElement && rootElement.style.setProperty("--other-text", otherColor);
+
   import { LottiePlayer } from "@lottiefiles/svelte-lottie-player";
 </script>
 
-<main>
+<main bind:this={rootElement}>
+  <div class="Header">
+    <span class="sign">Nikhil Bishnoi</span>
+    <div on:click={toggleMode}>
+      {#if mode == "Day"}
+        <img src="/fonts/moon.png" alt="icon" />
+      {:else}
+        <img src="/fonts/sun.png" alt="icon" />
+      {/if}
+    </div>
+  </div>
   <div class="NameDiv">
     <span class="FirstName">Hello, I am Nikhil </span>
     <span class="BoldName">Bishnoi</span>
@@ -36,7 +81,12 @@
       <div class="SubSectionDiv">
         <row>
           <span class="SubSection">Taiyari Karlo </span>
-          <span class="Description">| Co-founder and CTO | Link</span>
+          <span class="Description"
+            >| Co-founder and CTO | <a
+              href="https://play.google.com/store/apps/details?id=com.uddan.taiyarikarlo&hl=en_IN&gl=US"
+              >Link</a
+            ></span
+          >
         </row>
         <span class="Location"
           >Feb 2021 to July 2022 | Hyderabad, Telangana</span
@@ -56,20 +106,27 @@
         </li>
         <li class="item">
           Later hired interns and led a that worked on switching the same
-          application to Flutter.
+          application to <span class="bolddd">Flutter</span>.
         </li>
         <li class="item">
-          Used third-party APIs like Razorpay and Cashfree for payments, Raygun
-          for error reporting, JW Player for video streaming, 99sms for messages
-          and OTP verification and Shiprocket for shipping books.
+          Used third-party APIs like <span class="bolddd">Razorpay</span> and
+          <span class="bolddd">Cashfree</span>
+          for payments, <span class="bolddd">Raygun</span>
+          for error reporting, <span class="bolddd">JW Player</span> for video
+          streaming, <span class="bolddd">99sms</span> for messages and OTP
+          verification and <span class="bolddd">Shiprocket</span> for shipping books.
         </li>
         <li class="item">
-          The application has more than 2,50,000 downloads with 65,000 monthly
-          active users and 4.6 rating on google play store.
+          The application has more than <span class="bolddd"
+            >2,50,000 downloads</span
+          >
+          with <span class="bolddd">65,000</span> monthly active users and
+          <span class="bolddd">4.6 rating</span>
+          on google play store.
         </li>
         <li class="item">
-          Recorded more than 130,000 USD revenue in our first year with 34%
-          profit margin.
+          Recorded more than <span class="bolddd">130,000 USD</span> revenue in
+          our first year with <span class="bolddd">34%</span> profit margin.
         </li>
       </div>
       <div class="SubSectionDiv">
@@ -78,13 +135,13 @@
           <span class="Description"> | Undergraduate Researcher</span>
           <span class="Location">June 2021 - Present | IIIT Hyderabad</span>
           <li class="item">
-            Working under Dr Radhika Krishnan as an undergraduate researcher for
-            my ongoing thesis for Master of Science in Computational
-            Linguistics.
+            Working under <span class="bolddd">Dr Radhika Krishnan</span> as an
+            undergraduate researcher for my ongoing thesis for Master of Science
+            in <span class="bolddd">Computational Linguistics</span>.
           </li>
           <li class="item">
-            Performing sentiment analysis of user posts on environmental topics
-            on different social media platform.
+            Performing <span class="bolddd">sentiment analysis</span> of user posts
+            on environmental topics on different social media platform.
           </li>
         </row>
       </div>
@@ -116,10 +173,16 @@
         </row>
         <span class="Location">Selenium, Beautiful Soup , Python , NodeJS</span>
         <span class="item">
-          Scraped 45,000+ questions from different websites in vernacular
-          languages using Selenium and BS4 in Python and then built telegram bot
-          using Node Js and Firebase cloud functions to conduct quizes. This
-          helped us gain 50,000 subscribers on telegram channel.
+          Scraped <span class="bolddd">45,000+</span> questions from different
+          websites in vernacular languages using
+          <span class="bolddd">Selenium</span>
+          and <span class="bolddd">BS4</span> in
+          <span class="bolddd">Python</span> and then built
+          <span class="bolddd">telegram bot</span> using
+          <span class="bolddd">Node Js</span>
+          and <span class="bolddd">Firebase cloud functions</span> to conduct
+          quizes. This helped us gain <span class="bolddd">50,000</span> subscribers
+          on telegram channel.
         </span>
       </div>
 
@@ -130,8 +193,9 @@
         <span class="Location"> Python </span>
         <span class="item">
           Built a terminal based arcade game inspired by the classical brick
-          breaker game using various OOPs concepts. Added additional power ups
-          and levels with the help of an extensible design and reusable code
+          breaker game using various <span class="bolddd">OOPs concepts</span>.
+          Added additional power ups and levels with the help of an extensible
+          design and <span class="bolddd">reusable code</span>
         </span>
       </div>
 
@@ -141,8 +205,9 @@
         </row>
         <span class="Location">C Language</span>
         <span class="item">
-          Implemented a fully functional Linux shell in C that supports
-          redirection, piping, signal handling, background and foreground
+          Implemented a fully functional Linux shell in <span class="bolddd"
+            >C</span
+          > that supports redirection, piping, signal handling, background and foreground
           process execution.
         </span>
       </div>
@@ -152,9 +217,11 @@
         </row>
         <span class="Location">MERN</span>
         <span class="item">
-          Built a full stack job search platform using MERN stack. Used
-          Passport.js and bcrypt for authentication, MongoDB atlas for database
-          hosting.</span
+          Built a full stack job search platform using <span class="bolddd"
+            >MERN stack</span
+          >. Used <span class="bolddd">Passport.js</span> and
+          <span class="bolddd">bcrypt</span> for authentication,
+          <span class="bolddd">MongoDB</span> atlas for database hosting.</span
         >
       </div>
       <div class="SubSectionDiv">
@@ -165,9 +232,106 @@
         <span class="item">
           Built a mobile application platform for blood donors and blood seekers
           to connect and implemented a reward system based on number of
-          donations. Used Google Maps API for finding nearby donors.</span
+          donations. Used <span class="bolddd">Google Maps API</span> for finding
+          nearby donors.</span
         >
       </div>
+    </span>
+  </div>
+
+  <div class="SectionDiv">
+    <span class="Section">Skills</span>
+    <span class="SectionInnerDiv">
+      <div class="SubSectionDiv">
+        <row>
+          <span class="SubSection">Programming Languages </span>
+        </row>
+        <span class="item"
+          >C &bull C++ &bull Javascript &bull Shell &bull Python &bull Dart
+          &bull HTML5 &bull CSS</span
+        >
+      </div>
+
+      <div class="SubSectionDiv">
+        <row>
+          <span class="SubSection">Frameworks and Libraries</span>
+        </row>
+        <span class="item"
+          >Node.js &bull ReactJs &bull React Native &bull Flutter &bull Django
+        </span>
+      </div>
+
+      <div class="SubSectionDiv">
+        <row>
+          <span class="SubSection">Others</span>
+        </row>
+        <span class="item">
+          AWS &bull Firebase &bull Hasura &bull Supabase &bull MySQL &bull
+          SQLite &bull MongoDB
+        </span>
+      </div>
+    </span>
+  </div>
+
+  <div class="SectionDiv">
+    <span class="Section">Courses</span>
+    <span class="SectionInnerDiv">
+      <div class="SubSectionDiv">
+        <row>
+          <span class="SubSection">Undergraduate</span>
+        </row>
+        <span class="item">Data Structures and Algorithms</span>
+        <span class="item">Operating Systems and Networks</span>
+        <span class="item">Computational Linguistics</span>
+        <span class="item">Machine, Data and Learning</span>
+        <span class="item">Natural Language Processing</span>
+        <span class="item">Design and Analysis of Software Systems</span>
+        <span class="item">Probability and Statistics</span>
+        <span class="item">Discrete Structures</span>
+        <span class="item">Introduction to Software systems</span>
+      </div>
+    </span>
+  </div>
+  <div class="SectionDiv">
+    <span class="Section">Activities</span>
+    <span class="SectionInnerDiv">
+      <div class="SubSectionDiv">
+        <row>
+          <span class="SubSection">Achievements</span>
+        </row>
+        <span class="item"
+          ><span class="bolddd">AIR 101</span> out of
+          <span class="bolddd">160,000</span> in Undergraduate entrance exam by IIIT
+          Hyderabad</span
+        >
+        <span class="item"
+          ><span class="bolddd">AIR 6218</span> out of
+          <span class="bolddd">1.1 Million</span> students in JEE Mains</span
+        >
+        <span class="item"
+          >Recieved best <span class="bolddd">Meme award</span> by college Humor
+          Club
+        </span>
+      </div>
+      <div class="SubSectionDiv">
+        <row>
+          <span class="SubSection">Position of Responsiblities</span>
+        </row>
+        <span class="item"> College Humor club Founder </span>
+        <span class="item"> Elected Member of Student's parliament </span>
+        <span class="item"> Campus life Committee Coordinator </span>
+        <span class="item"> Alumni Cell Coordinator </span>
+        <span class="item"> Felicity Marketing Head </span>
+      </div>
+    </span>
+  </div>
+  <div class="footer">
+    <span class="item">
+      Made with ❤︎ by Nikhil Bishnoi. Inspired by Deedy's resume template in
+      latex. Feel free to use <a
+        href="https://github.com/bishboi/Deedy-Resume-Website.git"
+        >this template.</a
+      >
     </span>
   </div>
 </main>
@@ -194,46 +358,72 @@
     src: url(/fonts/raleway/Raleway-Medium.otf);
   }
 
+  @font-face {
+    font-family: TheScientist;
+    src: url(/fonts/the-scientist/TheScientist.ttf);
+  }
+  :root {
+    --container-background: inherit;
+    --primary-text: inherit;
+    --secondary-text: inherit;
+    --other-text: inherit;
+  }
+
   main {
     text-align: center;
     padding: 1em;
     max-width: 240px;
     margin: 0 auto;
+    background-color: var(--container-background);
   }
 
+  .Header {
+    color: var(--primary-text);
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    font-family: "Lato-Hai";
+    margin-bottom: 100px;
+    justify-content: space-between;
+  }
+
+  .sign {
+    color: var(--primary-text);
+
+    font-family: "TheScientist";
+    font-size: 2em;
+  }
+
+  .NameDiv {
+    max-width: 1000px;
+    margin: auto;
+  }
   .FirstName {
-    color: #000000;
+    color: var(--primary-text);
     font-family: "Lato-Hai";
     font-size: 4em;
     font-weight: 100;
   }
 
   .BoldName {
-    color: #000000;
+    color: var(--primary-text);
     font-family: "Lato-Lig";
     font-size: 4em;
     font-weight: 100;
   }
 
   .MainDescription {
-    color: #000000;
+    color: var(--primary-text);
     font-family: "Lato-Hai";
     font-size: 1.5em;
     font-weight: 100;
     margin: auto;
     max-width: 500px;
-    border: 3px solid #ffffff;
-  }
-  .NameDiv {
-    max-width: 1000px;
-    margin: auto;
-    border: 3px solid #ffffff;
   }
 
   .ContentDiv {
     max-width: 1000px;
     margin: auto;
-    border: 3px solid #ffffff;
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-evenly;
@@ -242,14 +432,12 @@
   .SectionDiv {
     max-width: 1000px;
     margin: auto;
-    border: 3px solid #ffffff;
     display: flex;
     margin-bottom: 50px;
     justify-content: start;
   }
 
   .SectionInnerDiv {
-    border: 3px solid #ffffff;
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
@@ -259,10 +447,10 @@
   .Section {
     transform: rotate(180deg);
     writing-mode: vertical-rl;
-
+    text-transform: uppercase;
     font-family: "Lato-Hai";
     font-size: 3em;
-    margin-right: 25px;
+    color: var(--primary-text);
   }
 
   .SubSectionDiv {
@@ -275,6 +463,7 @@
   }
 
   .SubSection {
+    color: var(--primary-text);
     font-family: "Lato-Bol";
     font-size: 1.5em;
     text-transform: uppercase;
@@ -284,23 +473,32 @@
     font-size: 1.25em;
     text-transform: uppercase;
 
-    color: #333333;
+    color: var(--secondary-text);
   }
   .Location {
-    color: #6a6a6a;
+    color: var(--other-text);
     font-family: "Raleway-Medium";
     font-size: 1.25em;
   }
 
   .item {
+    color: var(--primary-text);
     font-family: "Lato-Lig";
   }
   .boldd {
+    color: var(--primary-text);
+
     font-family: "Lato-Lig";
   }
 
   .bolddd {
+    color: var(--primary-text);
     font-family: "Lato-Reg";
+  }
+  .footer {
+    margin-top: 75px;
+    margin-bottom: 25px;
+    font-size: 1.3em;
   }
   @media (min-width: 240px) {
     main {
