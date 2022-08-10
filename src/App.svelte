@@ -89,7 +89,7 @@
           >
         </row>
         <span class="Location"
-          >Feb 2021 to June 2022 | Hyderabad, Telangana</span
+          >Feb 2021 to July 2022 | Hyderabad, Telangana</span
         >
         <li class="item">
           <span class="bolddd">Taiyari Karlo</span> is an
