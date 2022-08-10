@@ -82,14 +82,14 @@
         <row>
           <span class="SubSection">Taiyari Karlo </span>
           <span class="Description"
-            >| Co-founder and CTO | <a
+            >| Software Developer | Part Time | <a
               href="https://play.google.com/store/apps/details?id=com.uddan.taiyarikarlo&hl=en_IN&gl=US"
               >Link</a
             ></span
           >
         </row>
         <span class="Location"
-          >Feb 2021 to July 2022 | Hyderabad, Telangana</span
+          >Feb 2021 to June 2022 | Hyderabad, Telangana</span
         >
         <li class="item">
           <span class="bolddd">Taiyari Karlo</span> is an
@@ -97,7 +97,7 @@
           exam preparation.
         </li>
         <li class="item">
-          Worked as a sole developer and built Taiyari Karlo <span
+          Worked as a founding member and designed and built Taiyari Karlo <span
             class="bolddd">Mobile application</span
           >
           from scratch in <span class="bolddd">React Native</span> and
@@ -105,8 +105,9 @@
           and admin website in <span class="bolddd">ReactJs</span>
         </li>
         <li class="item">
-          Later hired interns and led a that worked on switching the same
-          application to <span class="bolddd">Flutter</span>.
+          Later led a team that worked on switching the same application to <span
+            class="bolddd">Flutter</span
+          >.
         </li>
         <li class="item">
           Used third-party APIs like <span class="bolddd">Razorpay</span> and
@@ -123,10 +124,6 @@
           with <span class="bolddd">65,000</span> monthly active users and
           <span class="bolddd">4.6 rating</span>
           on google play store.
-        </li>
-        <li class="item">
-          Recorded more than <span class="bolddd">130,000 USD</span> revenue in
-          our first year with <span class="bolddd">34%</span> profit margin.
         </li>
       </div>
       <div class="SubSectionDiv">
