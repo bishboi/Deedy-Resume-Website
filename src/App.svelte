@@ -82,7 +82,7 @@
         <row>
           <span class="SubSection">Taiyari Karlo </span>
           <span class="Description"
-            >| Software Developer | Part Time | <a
+            >| co-founder (exited with a merger) | <a
               href="https://play.google.com/store/apps/details?id=com.uddan.taiyarikarlo&hl=en_IN&gl=US"
               >Link</a
             ></span
@@ -97,8 +97,8 @@
           exam preparation.
         </li>
         <li class="item">
-          Worked as a founding member and designed and built Taiyari Karlo <span
-            class="bolddd">Mobile application</span
+          Designed and built Taiyari Karlo <span class="bolddd"
+            >Mobile application</span
           >
           from scratch in <span class="bolddd">React Native</span> and
           <span class="bolddd">Firebase</span>
@@ -122,8 +122,17 @@
             >2,50,000 downloads</span
           >
           with <span class="bolddd">65,000</span> monthly active users and
-          <span class="bolddd">4.6 rating</span>
+          <span class="bolddd">4.7 rating</span>
           on google play store.
+        </li>
+        <li class="item">
+          Recorded a revenue of more than <span class="bolddd">130,000 USD</span
+          >
+          in first year with <span class="bolddd">38% profit margin</span>.
+        </li>
+        <li class="item">
+          <span class="bolddd">Exited with a merger</span> with another small scale
+          Ed-Tech company.
         </li>
       </div>
       <div class="SubSectionDiv">
